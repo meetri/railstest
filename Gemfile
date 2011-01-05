@@ -12,7 +12,7 @@ gem 'haml'
 
 gem 'sqlite3-ruby', :require => 'sqlite3'
 
-gem 'dragonfly', '~>0.8.1'
+#gem 'dragonfly', '~>0.8.1'
 gem 'rack-cache', :require => 'rack/cache'
 
 
