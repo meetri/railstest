@@ -1,4 +1,4 @@
-class UpdateUser < ActiveRecord::Migration
+class UpdateUsers < ActiveRecord::Migration
 
   def self.up
     add_column :users, :admin, :int
