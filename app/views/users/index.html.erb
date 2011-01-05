@@ -1,26 +1,28 @@
-<div>
-  <h1>Users</h1>
+<h1>Listing users</h1>
 
-  <table>
-    <tr>
-      <th>Login</th>
-      <th>Email</th>    
-      <th>Login Count</th>    
-      <th>Actions</th>
-    </tr>
-    <% @users.each do |user| %>
-      <tr>
-        <td><%=user.login%></td> 
-        <td><%=user.email%></td>
-        <td><%=user.login_count %> </td>
-        <td>
-          <%=link_to("Show",{:action => 'show',:id => user.id}, :class => 'action show') %>        
-          <%=link_to("Edit","#", :class => 'action edit') %>        
-          <%=link_to("Delete","#", :class => 'action delete') %>        
-        </td>
-      </tr>
-    <% end %>
-  </table>
+<table>
+  <tr>
+    <th>Login</th>
+    <th>Email</th>    
+    <th>Login Count</th>    
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
 
+<% @badges.each do |badge| %>
+  <tr>
 
-</div> 
+    <td><%=user.login%></td> 
+    <td><%=user.email%></td>
+    <td><%=user.login_count %> </td>
+    <td><%= link_to 'Show', user %></td>
+    <td><%= link_to 'Edit', edit_user_path(user) %></td>
+    <td><%= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New User', new_user_path %>
