@@ -1,4 +1,4 @@
-<%= form_for(@badge) do |f| %>
+<%= form_for(@badge, :html => {:multipart => true}) do |f| %>
   <% if @badge.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@badge.errors.count, "error") %> prohibited this badge from being saved:</h2>
