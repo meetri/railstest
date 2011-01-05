@@ -8,7 +8,7 @@
 <% unless @badge.image.nil? %>
 <p>
   <b>Image:</b>
-  <img src="<%= @badge.image.url %>" />
+  <img src="<%= @badge.image.url("300x250#") %>" />
 </p>
 <% end %>
 
