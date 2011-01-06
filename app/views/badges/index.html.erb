@@ -13,7 +13,7 @@
     <td><%= badge.name %></td>
     <td>...</td>
     <td><%= link_to 'Details', badge %></td>
-    <td><%= link_to 'Share', badge, "share"  %></td>
+    <td><%= link_to 'Share', badge, :action => :share  %></td>
     <% if current_user.admin == 1 %>
     <td><%= link_to 'Edit', edit_badge_path(badge) %></td>
     <td><%= link_to 'Destroy', badge, :confirm => 'Are you sure?', :method => :delete %></td>
