@@ -3,6 +3,8 @@ class BadgesController < ApplicationController
   load_and_authorize_resource
   
   def share
+    require 'action_mailer'
+    
     @badge = Badge.find(params[:id])
     
     mail(:from=>"admin@testapp.com",
