@@ -8,6 +8,7 @@ class BadgesController < ApplicationController
     @badge = Badge.find(params[:id])
     @user = User.find(2)
     mail = UserMailer.welcome ( @user ).deliver
+    mail.deliver
     
   end
   
