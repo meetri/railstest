@@ -4,10 +4,11 @@ class Ability
   def initialize(user)
     
     unless user.nil?
+      alias_action :share => :read
       
       if user.admin == 1
         can :manage, :all
-      else
+      else        
         can :read, :all
         can :manage, User , :id => user.id
       end
