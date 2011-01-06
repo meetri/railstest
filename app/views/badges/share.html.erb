@@ -8,7 +8,7 @@
 <% unless @badge.image.nil? %>
   <p>
     <b>Image:</b>
-    <%=@badge.show_image("320x250#")%>    
+    <%=@badge.show_image("320x250#").html_safe %>    
   </p>
 <% end %>
 
