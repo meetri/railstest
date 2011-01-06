@@ -3,19 +3,18 @@ class Ability
   
   def initialize(user)
     
-    unless user.nil?
+    alias_action :share, :to => :read
       
-      alias_action :share, :to => :read
-      
-      if user.admin == 1
-        can :manage, :all
-      else        
-        can :read, :all
-        can :manage, User , :id => user.id
-      end
-      
+    if user.nil?
+      can :read, Home
+    else if user.admin == 1
+      can :manage, :all
+    else        
+      can :read, :all
+      can :manage, User , :id => user.id
     end
       
+    end
   end
 end
   
