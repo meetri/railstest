@@ -3,12 +3,11 @@ class BadgesController < ApplicationController
   load_and_authorize_resource
   
   def share
-    require 'action_mailer'
-    
     @badge = Badge.find(params[:id])
-    @user = current_user;
-    UserMailer.welcome ( @user ).deliver
     
+    #this is just test code to see if UserMailer works ...
+    @user = current_user
+    UserMailer.welcome ( @user ).deliver    
     
   end
   
