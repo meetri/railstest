@@ -5,6 +5,9 @@ class BadgesController < ApplicationController
   def share
     @badge = Badge.find(params[:id])
     
+    mail(:from=>"admin@testapp.com",
+          :to=>"meetri@gmail.com",
+          :subject=>"this is a test");
     
   end
   

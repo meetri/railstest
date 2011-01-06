@@ -14,6 +14,7 @@ gem 'haml'
 
 gem 'sqlite3-ruby', :require => 'sqlite3'
 
+gem "mail"
 gem "cancan"
 
 gem 'dragonfly', '~>0.8.1'
