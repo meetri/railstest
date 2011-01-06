@@ -1,4 +1,7 @@
 class BadgesController < ApplicationController
+  
+  load_and_authorize_resource
+  
   # GET /badges
   # GET /badges.xml
   def index
