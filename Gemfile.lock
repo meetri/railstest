@@ -39,6 +39,7 @@ GEM
     arel (1.0.1)
       activesupport (~> 3.0.0)
     builder (2.1.2)
+    cancan (1.4.1)
     dragonfly (0.8.1)
       rack
     erubis (2.6.6)
@@ -83,9 +84,12 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  actionmailer
   authlogic!
+  cancan
   dragonfly (~> 0.8.1)
   haml
+  mail
   rack-cache
   rails (= 3.0.0)
   sqlite3-ruby
