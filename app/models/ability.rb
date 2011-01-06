@@ -3,12 +3,16 @@ class Ability
   
   def initialize(user)
     
-    if user != nil && user.admin == 1
-      can :manage, :all
-    #else user != nil
-    #  can :read, :all
+    unless user.nil?
+      
+      if user.admin == 1
+        can :manage, :all
+      else
+        can :read, :all
+      end
       
     end
+      
   end
-  
 end
+  
