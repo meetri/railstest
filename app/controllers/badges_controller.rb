@@ -4,10 +4,11 @@ class BadgesController < ApplicationController
   
   def share
     @badge = Badge.find(params[:id])
-    
-    #this is just test code to see if UserMailer works ...
     @user = current_user
+    
+=begin
     UserMailer.welcome ( @user ).deliver    
+=end
     
   end
   
