@@ -14,7 +14,7 @@
     <td>...</td>
     <td><%= link_to 'Details', badge %></td>
     <td><%= link_to 'Share', :id => badge , :action => :share  %></td>
-    <% if current_user.admin == 1 %>
+    <% if can? :update, badge %>
     <td><%= link_to 'Edit', edit_badge_path(badge) %></td>
     <td><%= link_to 'Destroy', badge, :confirm => 'Are you sure?', :method => :delete %></td>
     <% end %>
