@@ -2,6 +2,12 @@ class BadgesController < ApplicationController
   
   load_and_authorize_resource
   
+  def share
+    @badge = Badge.find(params[:id])
+    
+    
+  end
+  
   # GET /badges
   # GET /badges.xml
   def index

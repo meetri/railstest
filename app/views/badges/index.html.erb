@@ -2,19 +2,22 @@
 
 <table>
   <tr>
+    <th>Image</th>
     <th>Name</th>
-    <th>Descr</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>Meta Data</th>    
   </tr>
 
 <% @badges.each do |badge| %>
   <tr>
-    <td><%= badge.name %></td>    
-    <td><%= link_to 'Show', badge %></td>
+    <td><%= badge.show_image("40x40#")) %></td>    
+    <td><%= badge.name %></td>
+    <td>...</td>
+    <td><%= link_to 'Details', badge %></td>
+    <td><%= link_to 'Share', share_badge_path(badge) %></td>
+    <% if current_user.admin == 1 %>
     <td><%= link_to 'Edit', edit_badge_path(badge) %></td>
     <td><%= link_to 'Destroy', badge, :confirm => 'Are you sure?', :method => :delete %></td>
+    <% end %>
   </tr>
 <% end %>
 </table>
