@@ -1,7 +1,7 @@
 Badger::Application.routes.draw do
   
   resources :badges
-  match 'share' => "badges#share", :as => :share
+  match 'badge/share/:id' => "badges#share", :as => :share
 
   get "home/index"
 
