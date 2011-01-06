@@ -24,4 +24,6 @@
 
 <br />
 
+<% if can? :create, badge %>
 <%= link_to 'New Badge', new_badge_path %>
+<% end %>
