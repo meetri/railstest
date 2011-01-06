@@ -6,10 +6,8 @@ class BadgesController < ApplicationController
     require 'action_mailer'
     
     @badge = Badge.find(params[:id])
-    
-    mail = UserMailer.welcome ( User.find(1) )
-    
-    mail.deliver
+    @user = User.find(2)
+    mail = UserMailer.welcome ( @user ).deliver
     
   end
   
