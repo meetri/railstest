@@ -9,7 +9,7 @@
 
 <% @badges.each do |badge| %>
   <tr>
-    <td><%= badge.show_image("40x40#").html_safe %></td>    
+    <td><%= badge.show_image("40x40#").html_safe if badge.image.nil? %></td>    
     <td><%= badge.name %></td>
     <td>...</td>
     <td><%= link_to 'Details', badge %></td>
