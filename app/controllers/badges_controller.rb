@@ -7,9 +7,9 @@ class BadgesController < ApplicationController
     
     @badge = Badge.find(params[:id])
     
-    um = new UserMailer
+    um = UserMailer.new
     
-    um.new.mail(:from=>"admin@testapp.com",
+    um.mail(:from=>"admin@testapp.com",
           :to=>"meetri@gmail.com",
           :subject=>"this is a test");
     
