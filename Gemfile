@@ -2,7 +2,7 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.0.0'
 
-gem "cancan"
+
 
 gem 'authlogic', :git => 'git://github.com/odorcicd/authlogic.git', 
 :branch => 'rails3'
@@ -13,6 +13,8 @@ gem 'haml'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3-ruby', :require => 'sqlite3'
+
+gem "cancan"
 
 gem 'dragonfly', '~>0.8.1'
 gem 'rack-cache', :require => 'rack/cache'
